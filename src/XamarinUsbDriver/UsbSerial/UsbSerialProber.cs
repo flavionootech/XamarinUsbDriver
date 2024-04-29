@@ -46,6 +46,8 @@ namespace XamarinUsbDriver.UsbSerial
             probeTable.AddDriver(FtdiSerialDriver.GetSupportedDevices(), device => new FtdiSerialDriver(device));
             probeTable.AddDriver(HidSerialDriver.GetSupportedDevices(), device => new HidSerialDriver(device));
             probeTable.AddDriver(ProlificSerialDriver.GetSupportedDevices(), device => new ProlificSerialDriver(device));
+            probeTable.AddDriver(CH341SerialDriver.GetSupportedDevices(), device => new CH341SerialDriver(device));
+
             return probeTable;
         }
 
